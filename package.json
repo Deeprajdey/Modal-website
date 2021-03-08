@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel sass server",
-    "server": "live-server",
-    "sass": "node-sass -w sass/style.scss css/style.css"
+    "start": "npm-run-all --parallel projectNameModifier sass server",
+    "server": "live-server -q",
+    "sass": "node-sass -w sass/style.scss css/style.css",
+    "projectNameModifier": "node ./lib/mutate.js"
   },
   "author": "",
   "license": "ISC",
