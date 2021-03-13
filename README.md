@@ -1,5 +1,6 @@
-# Basic-templete
+# Modal-website
+
 ```
-A BASIC SASS TEMPLATE FOR A QUICK STARTUP
+A Javascript Modal website
 
 ```
