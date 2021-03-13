@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #7bed9f;
+  --secondary-color: #01a3a4; }
+
 *,
 *::after,
 *::before {
@@ -13,4 +17,70 @@ html {
 body {
   line-height: 1.6;
   font-weight: 400;
-  color: #000; }
+  color: #000;
+  background-image: linear-gradient(to right bottom, var(--primary-color), var(--secondary-color));
+  min-height: 100vh;
+  background-repeat: no-repeat; }
+
+.container {
+  padding: 5rem 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 20rem; }
+
+.show-modal {
+  min-width: 10rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer; }
+
+.hidden {
+  display: none; }
+
+.modal {
+  position: relative;
+  height: calc(100vh - 20rem); }
+
+.overlay {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: -20rem;
+  left: 0; }
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  height: 55rem;
+  width: 55rem;
+  background-color: #fff;
+  padding: 3rem;
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px; }
+
+.heading-2 {
+  font-size: 5rem; }
+
+.modal-cross {
+  font-size: 5rem;
+  font-weight: bold;
+  justify-self: end;
+  align-self: start;
+  cursor: pointer; }
+
+p {
+  font-size: 2.5rem;
+  grid-row: 2/3;
+  grid-column: 1/-1; }
